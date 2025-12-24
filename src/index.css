@@ -1,0 +1,453 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+/* Custom Font - Coffee+Tea Demo */
+@font-face {
+  font-family: 'coffee+tea demo';
+  src: url('/coffee+teademo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Custom Font - Woodtrap */
+@font-face {
+  font-family: 'Woodtrap';
+  src: url('/Woodtrap.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Custom Font - BackToSchool */
+@font-face {
+  font-family: 'BackToSchool';
+  src: url('/BackToSchool.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset browser spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Sun rotation animation */
+@keyframes sunRotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Global font for all headings, subheadings, and buttons */
+h1, h2, h3, h4, h5, h6,
+.indoor-sports-card span,
+.highlight-card span,
+.culturals-card span {
+  font-family: 'Baloo 2', cursive, sans-serif !important;
+}
+
+/* Coffee+Tea Demo font for all buttons */
+button {
+  font-family: 'coffee+tea demo', sans-serif !important;
+}
+
+/* Override for specific event page elements */
+.events-info-page h2,
+.events-info-page .text-white {
+  font-family: 'BackToSchool', sans-serif !important;
+}
+
+/* Coffee+Tea Demo font for menu cards */
+.menu-title-heading,
+.menu-grid-card,
+.menu-grid-card span,
+.menu-grid-card h1,
+.menu-grid-card h2,
+.menu-grid-card h3,
+.menu-grid-card h4,
+.menu-grid-card h5,
+.menu-grid-card h6 {
+  font-family: 'coffee+tea demo', sans-serif !important;
+}
+
+/* Coffee+Tea Demo font specifically for About Theme section */
+.about-theme-section,
+.about-theme-section h1,
+.about-theme-section h2,
+.about-theme-section h3,
+.about-theme-section h4,
+.about-theme-section h5,
+.about-theme-section h6,
+.about-theme-section p,
+.about-theme-section div {
+  font-family: 'coffee+tea demo', sans-serif !important;
+}
+
+/* Woodtrap font for event section headings */
+.events-heading,
+.event-category-heading,
+.events-page-heading {
+  font-family: 'Woodtrap', sans-serif !important;
+}
+
+/* Woodtrap font for event detail page headings */
+.event-detail-page h1,
+.event-detail-page h2,
+.event-detail-page h3 {
+  font-family: 'Woodtrap', sans-serif !important;
+}
+
+/* BackToSchool font for event card sub-headings */
+.event-card-title,
+.text-yellow-300 {
+  font-family: 'BackToSchool', sans-serif !important;
+}
+
+/* Circular Back Navigation Button */
+.circular-back-button {
+  position: fixed;
+  top: 0.3rem;
+  left: 0.8rem;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.circular-back-button::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #522566;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.circular-back-button::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-left: 2px solid #522566;
+  border-bottom: 2px solid #522566;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130%, -50%) rotate(45deg);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.circular-back-button:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateX(-3px);
+}
+
+.circular-back-button:hover::before {
+  background: #fdee71;
+}
+
+.circular-back-button:hover::after {
+  border-left-color: #fdee71;
+  border-bottom-color: #fdee71;
+}
+
+.circular-back-button:active {
+  transform: translateX(-5px) scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .circular-back-button {
+    top: 0.3rem;
+    left: 0.3rem;
+    width: 42px;
+    height: 42px;
+  }
+  
+  .circular-back-button::before {
+    width: 18px;
+    height: 2px;
+  }
+  
+  .circular-back-button::after {
+    width: 8px;
+    height: 8px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+  }
+}
+
+/* Global Background Image */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('/Background-redesign.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Apply background to all main containers */
+.single-page-app,
+.w-full.min-h-screen,
+.w-screen.min-h-screen,
+.w-screen.h-screen {
+  background-image: url('/Background-redesign.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --color-mahotsav-purple-50: #f3e8ff;
+  --color-mahotsav-purple-100: #e9d5ff;
+  --color-mahotsav-purple-200: #ddd6fe;
+  --color-mahotsav-purple-300: #c4b5fd;
+  --color-mahotsav-purple-400: #a78bfa;
+  --color-mahotsav-purple-500: #8b5cf6;
+  --color-mahotsav-purple-600: #7c3aed;
+  --color-mahotsav-purple-700: #6d28d9;
+  --color-mahotsav-purple-800: #5b21b6;
+  --color-mahotsav-purple-900: #4c1d95;
+  --color-mahotsav-purple-950: #2e1065;
+
+  --color-mahotsav-gold-50: #fefce8;
+  --color-mahotsav-gold-100: #fef9c3;
+  --color-mahotsav-gold-200: #fef08a;
+  --color-mahotsav-gold-300: #fde047;
+  --color-mahotsav-gold-400: #facc15;
+  --color-mahotsav-gold-500: #eab308;
+  --color-mahotsav-gold-600: #ca8a04;
+  --color-mahotsav-gold-700: #a16207;
+  --color-mahotsav-gold-800: #854d0e;
+  --color-mahotsav-gold-900: #713f12;
+  --color-mahotsav-gold-950: #422006;
+
+  --color-mahotsav-pink-50: #fdf2f8;
+  --color-mahotsav-pink-100: #fce7f3;
+  --color-mahotsav-pink-200: #fbcfe8;
+  --color-mahotsav-pink-300: #f9a8d4;
+  --color-mahotsav-pink-400: #f472b6;
+  --color-mahotsav-pink-500: #ec4899;
+  --color-mahotsav-pink-600: #db2777;
+  --color-mahotsav-pink-700: #be185d;
+  --color-mahotsav-pink-800: #9d174d;
+  --color-mahotsav-pink-900: #831843;
+  --color-mahotsav-pink-950: #500724;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom component styles */
+.btn-primary {
+  padding: 2.5rem 1rem;
+  background: rgba(22, 33, 62, 0.9);
+  color: #facc15;
+  border: 2px solid #facc15;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #facc15;
+  color: #5b21b6;
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  padding: 2.5rem 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal and form components */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 32rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.close-btn {
+  color: #6b7280;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+  background: transparent;
+  border: none;
+}
+
+.close-btn:hover {
+  color: #374151;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px #8b5cf6;
+  border-color: transparent;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #facc15, #ca8a04);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.75rem;
+}
+
+.floating-card {
+  transform: scale(1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.floating-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Custom Scrollbar Styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #facc15 rgba(255, 255, 255, 0.1);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #ca8a04;
+}

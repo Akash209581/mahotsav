@@ -1,0 +1,266 @@
+/* ============================================
+   SIGNUP PAGE STYLES - GLASSY PINK FLEX CARD
+   ============================================ */
+
+/* Signup Overlay */
+.signup-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(20, 10, 30, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Signup Modal Content */
+.signup-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 550px;
+  max-width: 95%;
+  min-height: 420px;
+  max-height: 85vh;              /* ⭐ LIMIT HEIGHT */
+  overflow: hidden;              /* ⭐ PREVENT OUTER SCROLL */
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 182, 213, 0.35),
+    rgba(190, 90, 190, 0.25)
+  );
+
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+
+  border-radius: 28px;
+  border: 1.5px solid rgba(255, 200, 230, 0.45);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+
+  padding: 36px 34px;
+  animation: harmonyEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+
+/* Close Button */
+.signup-close-btn {
+  position: absolute;
+  top: 16px;
+  right: -50px;
+
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.signup-close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Symbolic Harmony Element */
+.signup-modal-content::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(255,182,193,0.15) 0%,
+    rgba(255,192,203,0.05) 70%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  animation: harmonicPulse 4s ease-in-out infinite;
+}
+
+/* Harmony Flow Line */
+.signup-modal-content::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,182,193,0.3),
+    transparent
+  );
+  border-radius: 2px;
+  filter: blur(1px);
+}
+
+/* Animations */
+@keyframes harmonyEnter {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes harmonicPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.05) rotate(180deg); }
+}
+
+/* Signup Modal Body */
+.signup-modal-body {
+  padding: 32px 38px 36px;
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: auto;              /* ⭐ SCROLL ENABLED */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,182,193,0.6) transparent;
+}
+
+/* Custom Scrollbar (Chrome / Edge) */
+.signup-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.signup-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.signup-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 193, 0.6);
+  border-radius: 10px;
+}
+
+/* Signup Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Input Fields */
+.signup-form .form-input,
+.signup-form .form-select {
+  color: white;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,182,193,0.4);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.signup-form .form-input::placeholder,
+.signup-form .form-select option {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form Section Headers */
+.signup-form h3 {
+  color: #fdee71;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.signup-prev-btn,
+.signup-next-btn,
+.signup-submit-btn {
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Links */
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 0.92rem;
+}
+
+.signup-link .login-btn-link {
+  color: #fdee71;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .signup-modal-content {
+    width: 92%;
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .signup-modal-content::before {
+    top: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .signup-modal-body {
+    padding: 28px 25px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-modal-content {
+    width: 94%;
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .signup-modal-content::before {
+    top: -5px;
+    right: -5px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .signup-modal-body {
+    padding: 20px 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .signup-modal-content {
+    width: 96%;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .signup-modal-content::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .signup-modal-body {
+    padding: 15px 12px;
+  }
+}

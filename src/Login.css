@@ -1,0 +1,198 @@
+/* ============================================
+   LOGIN PAGE – PINK GLASS CARD
+   ============================================ */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================================
+   Background Wrapper (Image stays visible)
+   ============================================ */
+.login-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* ============================================
+   Glassy Pink Login Card
+   ============================================ */
+.login-modal-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 520px;
+  min-height: 420px;
+  max-height: 80vh;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 182, 213, 0.35),
+    rgba(190, 90, 190, 0.25)
+  );
+
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+
+  border-radius: 28px;
+  border: 1.5px solid rgba(255, 200, 230, 0.45);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+
+  padding: 36px 34px;
+  overflow: hidden;
+}
+
+/* ============================================
+   Close Button
+   ============================================ */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 400;
+  cursor: pointer;
+
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.login-modal-header {
+  text-align: center;
+  margin-bottom: 22px;
+  padding-top: 8px;
+}
+
+.login-modal-header h2 {
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-shadow: 0 0 18px rgba(255, 180, 220, 0.6);
+}
+
+/* ============================================
+   Body
+   ============================================ */
+.login-modal-body {
+  width: 100%;
+}
+
+/* ============================================
+   Form
+   ============================================ */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ============================================
+   Input Fields
+   ============================================ */
+.login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ============================================
+   Login Button
+   ============================================ */
+.login-submit-btn {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+
+  background: linear-gradient(135deg, #ff9ecb, #c96ba1);
+  color: #fff;
+
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(201, 107, 161, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.login-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(201, 107, 161, 0.6);
+}
+
+/* ============================================
+   Signup Text
+   ============================================ */
+.signup-link {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+
+}
+
+.signup-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ============================================
+   Mobile Responsive (No Scroll)
+   ============================================ */
+@media (max-width: 480px) {
+  .login-modal-content {
+    width: 92%;
+    min-height: auto;
+    padding: 28px 22px;
+  }
+}
+/* Common input text style */
+.login-form .form-input {
+  color: #ffffff; /* matches password input text */
+  background: transparent; /* keep background consistent */
+  font-weight: 500;
+}
+
+/* Optional: placeholder color matching */
+.login-form .form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
