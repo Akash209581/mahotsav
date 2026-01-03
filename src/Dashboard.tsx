@@ -269,9 +269,9 @@ const Dashboard: React.FC = () => {
       title: "THEATRE & CINEMATOGRAPHY",
       subtitle: "Mime",
       rules: [
-        "Minimum 3 and Maximum of 8 participants are allowed to participate in a team.",
+        "Minimum 3 and Maximum of 6 participants are allowed to participate in a team",
         "Judgment will most likely be based on the qualities like idea, creativity of presentation, use of make-up, general impression.",
-        "Duration of performance shall be for maximum of 5 minutes",
+        "Duration of performance shall be for maximum of 5 minutes.",
         "Background music with no vocals is allowed."
       ],
       prizes: {

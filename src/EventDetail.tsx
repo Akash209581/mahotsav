@@ -1723,13 +1723,17 @@ const EventDetail: React.FC = () => {
       title: "FASHION COMPETITIONS",
       subtitle: "Craft Villa (Accessory Design)",
       rules: [
-        "This is an individual or team event (maximum 2 participants).",
-        "Participants need to create fashion accessories using crafts.",
-        "Duration: 2 hours.",
-        "Participants must bring their own materials.",
-        "Accessories can include jewelry, bags, headbands, belts, or any wearable items.",
-        "The design should be creative, wearable, and aesthetically appealing.",
-        "Judgment will be based on creativity, craftsmanship, design, and overall presentation."
+        "Maximum of 2 people can be in a team.",
+        "The teams should bring their own required materials.Items allowed:",
+        "a) Paper Quilling",
+        "b) Beaded Accessories Design.",
+        "c) Antique Accessories Design.",
+        "d) Fabric/Threaded Jewellery.",
+        "e) Leather Accessories Design.",
+        "f) Tribal Jewellery",
+        "g) Wood Accessories Design.",
+        "h) Wealth from Waste.",
+        "i) Greeting Cards"
       ],
       prizes: {
         first: "Rs. 2,000",
@@ -1747,12 +1751,12 @@ const EventDetail: React.FC = () => {
       title: "FASHION COMPETITIONS",
       subtitle: "Texart (Fashion Sketching)",
       rules: [
-        "This is an individual fashion sketching competition.",
-        "Theme will be announced on the spot.",
-        "Duration: 2 hours.",
+        "Theme will be given on the spot.",
+        "This is a solo event.",
+        "Participants should bring their own materials.",
         "Drawing sheet will be provided.",
         "Participants must bring their own sketching and coloring materials.",
-        "The sketch should showcase fashion design concepts based on the theme.",
+        "Designing should be done within the stipulated time provided.",
         "Judgment will be based on creativity, design concept, sketching skills, and overall presentation."
       ],
       prizes: {
@@ -1774,7 +1778,8 @@ const EventDetail: React.FC = () => {
         "This is an individual T-shirt designing competition.",
         "Theme will be announced on the spot.",
         "Duration: 2 hours.",
-        "Plain T-shirt will be provided.",
+        "Only T- Shirts will be provided (with additional charge of Rs.150).",
+        "Team of 1 or 2 participants.",
         "Participants must bring their own fabric colors, brushes, and designing materials.",
         "The design should be creative and based on the given theme.",
         "Judgment will be based on creativity, theme interpretation, color usage, and overall design."
@@ -1795,12 +1800,9 @@ const EventDetail: React.FC = () => {
       title: "SPOT LIGHT",
       subtitle: "Mahotsav Got Talent",
       rules: [
-        "This is an open talent show where participants can showcase any unique talent.",
-        "The performance can be solo or group (maximum 5 participants).",
-        "The maximum duration of the performance shall be 5 minutes.",
-        "Participants can perform magic, mimicry, beatboxing, stand-up comedy, unique musical performances, or any other special talent.",
-        "Participants must bring their own props if required.",
-        "Judgment will be based on uniqueness, skill level, entertainment value, and overall performance."
+        "The participant can be solo or group with no team limit.",
+        "Performance can be of any art or skill – Dance, music, special skills etc., that has an ‘X’ factor unlike the routine performances.",
+        "Judgement will be based on the overall impression created by the participants.",
       ],
       prizes: {
         first: "Rs. 7,000",
@@ -1819,11 +1821,11 @@ const EventDetail: React.FC = () => {
       subtitle: "Mr. and Ms. Mahotsav",
       rules: [
         "This is an individual personality competition for male and female categories.",
-        "Participants will go through multiple rounds including introduction, talent round, question-answer, and ramp walk.",
-        "Participants should come in formal/ethnic attire for introduction round.",
-        "Talent round: Showcase any talent (singing, dancing, mimicry, etc.) - 2 minutes max.",
-        "Participants should be confident, well-spoken, and presentable.",
-        "Judgment will be based on personality, confidence, talent, communication skills, and overall presence."
+        "It is a multiple round event where the participant will be tested on various capabilities like talent, presentation skills etc.",
+        "Details of Rounds:",
+        "Round 1 : It is a written round on personality assessment based questions.",
+        "Round 2 : It is a Talent Round. Any talent that you posses can be exhibited within the time limit of 2 to 3 minutes.",
+        "Round 3 : Participants should present their perspective on the given real time or general situation given by the jury."
       ],
       prizes: {
         first: "Rs. 4,000 (Mr. Mahotsav - Men)",
